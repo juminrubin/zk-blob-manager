@@ -1,0 +1,29 @@
+<?page title="Blob Manager" ?>
+<zk>
+	<style src="~./css/main-style.css" />
+	<vlayout sclass="frame" height="100%" apply="org.jumin.sample.zk.blob.HomeComposer">
+		<label sclass="title" value="Azure Blob Manager" />
+		<grid>
+			<columns>
+				<column width="250px" />
+				<column />
+			</columns>
+			<rows>
+				<row>
+					<label value="Blob SAS URL:" />
+					<textbox id="blobSasUrl" hflex="true" value="" />
+				</row>
+				<row>
+					<cell colspan="2">
+						<hlayout valign="middle">
+							<button id="listContentButton" label="List Contents" />
+						</hlayout>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		<label value="Blob Storage Contents:" />
+		<tree id="blobContentTree" vflex="true">
+		</tree>
+	</vlayout>
+</zk>
